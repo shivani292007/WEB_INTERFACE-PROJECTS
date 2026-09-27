@@ -1,0 +1,169 @@
+/* ================================
+   Google Fonts
+   ================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* ================================
+   Design tokens (CSS variables)
+   ================================ */
+:root {
+  --bg: #faf9f6;
+  --bg-alt: #f0eee8;
+  --surface: #ffffff;
+  --ink: #17171a;
+  --muted: #5a5a63;
+  --border: #e3e0d8;
+
+  --accent: #4f46e5;
+  --accent-dark: #372fb0;
+  --accent-soft: #eef0fd;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+
+  --font-heading: 'Poppins', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+
+  --max-width: 1080px;
+}
+
+/* ================================
+   Reset
+   ================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button, input, textarea {
+  font-family: inherit;
+}
+
+/* ================================
+   Layout helpers
+   ================================ */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell main > section {
+  flex: 1;
+}
+
+.page {
+  min-height: calc(100vh - 68px - 180px);
+  padding: 64px 0;
+}
+
+.section-label {
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.page-title {
+  font-size: 2.1rem;
+  margin-bottom: 12px;
+}
+
+.page-intro {
+  color: var(--muted);
+  max-width: 620px;
+  margin-bottom: 40px;
+}
+
+/* ================================
+   Buttons
+   ================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 26px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--ink);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ================================
+   Responsive
+   ================================ */
+@media (max-width: 640px) {
+  .page-title {
+    font-size: 1.7rem;
+  }
+}

@@ -1,0 +1,41 @@
+.home {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 68px - 84px);
+  background: linear-gradient(180deg, var(--accent-soft) 0%, var(--bg) 55%);
+}
+
+.home-inner {
+  max-width: 680px;
+}
+
+.home-name {
+  font-size: 3rem;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.home-role {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--accent-dark);
+  margin-bottom: 22px;
+}
+
+.home-intro {
+  color: var(--muted);
+  margin-bottom: 34px;
+  max-width: 560px;
+}
+
+.home-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .home-name {
+    font-size: 2.2rem;
+  }
+}
